@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- <link href="../node_modules/jsoneditor/dist/jsoneditor.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- <script src="../node_modules/jsoneditor/dist/jsoneditor.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.10.4/jsoneditor.css" integrity="sha512-iOFdnlwX6UGb55bU5DL0tjWkS/+9jxRxw2KiRzyHMZARASUSwm0nEXBcdqsYni+t3UKJSK7vrwvlL8792/UMjQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.10.4/jsoneditor.min.js"></script> -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -25,10 +30,55 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .root {
+        height: 100%;
+      }
+    </style>
+
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root" class="root"></div>
+    <!-- <div id="jsoneditor" style="width: 400px; height: 400px;"></div> -->
+    
+    <!-- <script>
+      console.log('haha')
+      // 创建编辑器
+      var container = document.getElementById("jsoneditor");
+      var editor = new JSONEditor(container);
+
+      
+
+      // 设置json数据
+      function setJSON () {
+          var json = {
+              "Array": [1, 2, 3],
+              "Boolean": true,
+              "Null": null,
+              "Number": 123,
+              "Object": {"a": "b", "c": "d"},
+              "String": "Hello World"
+          };
+          editor.set(json);
+      }
+
+      setJSON();
+
+      // 获取json数据
+      function getJSON() {
+          var json = editor.get();
+          alert(JSON.stringify(json, null, 2));
+      }
+
+      // getJSON();
+  </script> -->
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
