@@ -9,8 +9,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/setup-node@v4.0.1
+    - name: npm-test
+      run: |
+        npm version
+        echo 'good'
+        npm install 
+        pwd
+        
     - name: Checkout
       uses: actions/checkout@master
+
+    - name: pwd
+      run: pwd
       
     - name: deploy
       run: npm run deploy
