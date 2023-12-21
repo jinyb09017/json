@@ -8,6 +8,7 @@ jobs:
   deploy-to-pages:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/setup-node@v4.0.1
     - name: Checkout
       uses: actions/checkout@master
       
