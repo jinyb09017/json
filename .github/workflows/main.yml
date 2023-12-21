@@ -13,14 +13,15 @@ jobs:
       run: |
         npm version
         echo 'good'
-        npm install 
         pwd
         
     - name: Checkout
       uses: actions/checkout@master
 
     - name: pwd
-      run: pwd
+      run: |
+        pwd
+        npm install 
       
     - name: deploy
       run: npm run deploy
